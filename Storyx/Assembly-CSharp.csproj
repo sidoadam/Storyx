@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{90A69418-773B-AD87-EA56-2AF455015D29}</ProjectGuid>
+    <ProjectGuid>{74453CEB-B52B-2856-9B27-5569D40CD47F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_General.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_Simple.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_Alpha_General.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_Alpha_Simple.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_BgColor.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_BgTex.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Filter\FilterHSBC.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Mask\MaskAlpha_Expert.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Mask\MaskAlpha_General.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Mask\MaskAlpha_Simple.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitControllers\ITextureUpdatable.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitControllers\KitControllerRawImage.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitControllers\KitControllerRawImageBase.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitControllers\KitControllerRenderer.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitControllers\KitControllerRendererBase.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\Scripts\KitComponentBase.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\MultiShaderKit\Scripts\KitControllerBase.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\Scripts\LightsController.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\Scripts\VideoControllerRawImage.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\Scripts\VideoControllerRenderer.cs" />
+     <Compile Include="Assets\ChromaKeyKitAsset\Scripts\WebCamSample.cs" />
      <Compile Include="Assets\EasyMovieTexture\Scripts\MedaiPlayerSampleGUI.cs" />
      <Compile Include="Assets\EasyMovieTexture\Scripts\MedaiPlayerSampleSphereGUI.cs" />
      <Compile Include="Assets\EasyMovieTexture\Scripts\MediaPlayerCtrl.cs" />
@@ -278,8 +299,11 @@
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\androidnative.jar.txt" />
      <None Include="Assets\Shaders\VideoInVideo.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_BgTex.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-drive.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_Alpha_Simple.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_Alpha_General.shader" />
      <None Include="Assets\Plugins\StansAssets\Modules\ManifestManager\default.xml" />
      <None Include="Assets\Plugins\StansAssets\Modules\AndroidNative\Documentation\AN_VersionNotes.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-analytics.jar.txt" />
@@ -291,13 +315,16 @@
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\firebase\firebase-analytics-impl.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-gcm.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 3.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_010-101-010.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
      <None Include="Assets\Shaders\GreenToTransparent.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Filter\FilterHSBC.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-auth.jar.txt" />
      <None Include="Assets\Plugins\Android\AN_Res\AndroidManifest.xml" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-drive.jar.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\AndroidManifest.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_BgColor.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-ads-lite.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\firebase\firebase-analytics.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-base.txt" />
@@ -305,7 +332,9 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 3.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 2.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-auth-base.jar.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_111-101-111.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\app_licensing\an_licensing_library.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_101-010-101.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\an_googleplay.jar.txt" />
@@ -321,6 +350,7 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-analytics-impl.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-auth-base.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Mask\MaskAlpha_General.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-plus.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-ads.jar.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-ads.txt" />
@@ -330,6 +360,7 @@
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-appinvite.jar.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\androidnative.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\social\an_social.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_101-000-101.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-iid.jar.txt" />
      <None Include="Assets\Plugins\Android\AN_Res\res\values\version.xml" />
      <None Include="Assets\Plugins\Android\AN_Res\res\values\ids.xml" />
@@ -337,7 +368,9 @@
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-ads-lite.jar.txt" />
      <None Include="Assets\MoviePlayer\CHANGELOG.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Mask\MaskAlpha_Expert.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Mask\MaskAlpha_Simple.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\AN_Res\res\values\version.xml" />
@@ -345,9 +378,11 @@
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-base.jar.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text (TextureClip).shader" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_111-111-111.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\AN_Res\res\xml\file_paths.xml" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\AN_Res\res\values\ids.xml" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_010-111-010.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-auth.txt" />
      <None Include="Assets\Plugins\Android\AN_Res\res\values\analytics.xml" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-analytics-impl.jar.txt" />
@@ -356,7 +391,7 @@
      <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\an_googleplay.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>/Users/Mac/Desktop/UnityProjects/MakePhoto/MakePhoto/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>/Users/Mac/Desktop/Storyx/Storyx/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -379,7 +414,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{5B2813C9-041F-3858-99E6-B806480DA22C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{B4ECFEDD-1E4E-371B-34BD-FCA7E1969B5F}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5B2813C9-041F-3858-99E6-B806480DA22C}</ProjectGuid>
+    <ProjectGuid>{B4ECFEDD-1E4E-371B-34BD-FCA7E1969B5F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -417,8 +417,11 @@
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\androidnative.jar.txt" />
      <None Include="Assets\Shaders\VideoInVideo.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_BgTex.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-drive.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_Alpha_Simple.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_Alpha_General.shader" />
      <None Include="Assets\Plugins\StansAssets\Modules\ManifestManager\default.xml" />
      <None Include="Assets\Plugins\StansAssets\Modules\AndroidNative\Documentation\AN_VersionNotes.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-analytics.jar.txt" />
@@ -430,13 +433,16 @@
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\firebase\firebase-analytics-impl.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-gcm.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 3.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_010-101-010.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
      <None Include="Assets\Shaders\GreenToTransparent.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Filter\FilterHSBC.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-auth.jar.txt" />
      <None Include="Assets\Plugins\Android\AN_Res\AndroidManifest.xml" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-drive.jar.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\AndroidManifest.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\ChromaKey\ChromaKey_BgColor.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-ads-lite.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\firebase\firebase-analytics.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-base.txt" />
@@ -444,7 +450,9 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 3.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 2.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-auth-base.jar.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_111-101-111.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\app_licensing\an_licensing_library.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_101-010-101.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\an_googleplay.jar.txt" />
@@ -460,6 +468,7 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-analytics-impl.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-auth-base.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Mask\MaskAlpha_General.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-plus.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-ads.jar.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-ads.txt" />
@@ -469,6 +478,7 @@
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-appinvite.jar.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\androidnative.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\social\an_social.txt" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_101-000-101.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-iid.jar.txt" />
      <None Include="Assets\Plugins\Android\AN_Res\res\values\version.xml" />
      <None Include="Assets\Plugins\Android\AN_Res\res\values\ids.xml" />
@@ -476,7 +486,9 @@
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-ads-lite.jar.txt" />
      <None Include="Assets\MoviePlayer\CHANGELOG.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Mask\MaskAlpha_Expert.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Mask\MaskAlpha_Simple.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\AN_Res\res\values\version.xml" />
@@ -484,9 +496,11 @@
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-base.jar.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text (TextureClip).shader" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth.shader" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_111-111-111.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\AN_Res\res\xml\file_paths.xml" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\AN_Res\res\values\ids.xml" />
+     <None Include="Assets\ChromaKeyKitAsset\MultiShaderKit\ChromaKeyKit\KitComponents\Blur\Blur_010-111-010.shader" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-auth.txt" />
      <None Include="Assets\Plugins\Android\AN_Res\res\values\analytics.xml" />
      <None Include="Assets\Plugins\StansAssets\Support\NativeLibraries\Android\google_play\play-services-analytics-impl.jar.txt" />

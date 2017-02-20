@@ -43,8 +43,16 @@ public class Adventure1_3 : MonoBehaviour {
 
 	public void onChapterVideoEnded()
 	{
+		//chapterVideo.Stop();
 		chapterVideo.OnEnd -= onChapterVideoEnded;
+		//chapterVideo.gameObject.SetActive (false);
+		loadNextScene();
+	}
+
+	void loadNextScene()
+	{
 		SceneManager.LoadScene ("Adventure1_4");
+		//Application.LoadLevel("Adventure1_4");
 	}
 
 	// Update is called once per frame

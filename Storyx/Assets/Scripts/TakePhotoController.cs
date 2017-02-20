@@ -34,8 +34,10 @@ public class TakePhotoController : MonoBehaviour {
 
 	void Start () {
 		//takePhotoPreviewContainer.SetActive (false);
-		disableNextBtn ();
-		AndroidCamera.Instance.OnImagePicked += OnImagePicked;
+		//disableNextBtn ();
+		if (currentPhotoTYpe == PhotoType.PhotoTypeA) {
+			AndroidCamera.Instance.OnImagePicked += OnImagePicked;
+		}
 
 		if (WebCamObject != null) {
 			WebCamObject.SetActive (false);
@@ -57,7 +59,14 @@ public class TakePhotoController : MonoBehaviour {
 
 	void OnDestroy()
 	{
-		AndroidCamera.Instance.OnImagePicked -= OnImagePicked;
+		try
+		{
+			//AndroidCamera.Instance.OnImagePicked -= OnImagePicked;
+		}
+		catch (System.Exception err) {
+
+		}
+
 	}
 
 	public void GetImageFromCamera() {

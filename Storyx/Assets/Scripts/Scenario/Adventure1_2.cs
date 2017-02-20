@@ -16,6 +16,8 @@ public class Adventure1_2 : MonoBehaviour {
 		adminVideo.OnEnd += onAdminVideoEnded;
 		chapterVideo.OnEnd += onChapterVideoEnded;
 		//adminVideo.OnReady += onInitAdminVideo;
+
+		//Invoke ("onChapterVideoEnded",2);
 	}
 
 	void onInitAdminVideo()
@@ -48,8 +50,11 @@ public class Adventure1_2 : MonoBehaviour {
 
 	public void onChapterVideoEnded()
 	{
+		Debug.Log ("chapter 2 end");
+		chapterVideo.UnLoad ();
 		chapterVideo.OnEnd -= onChapterVideoEnded;
 		SceneManager.LoadScene ("Adventure1_3");
+		//SceneManager.LoadScene ("test2");
 	}
 
 	// Update is called once per frame

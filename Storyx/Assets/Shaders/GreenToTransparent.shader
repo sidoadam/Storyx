@@ -34,7 +34,7 @@
 			
 			fixed4 frag(v2f i) : COLOR {
 				fixed4 col1 = tex2D(_MainTex, i.uv1);
-				fixed4 val = ceil(saturate(col1.g - col1.r - _Threshold)) * ceil(saturate(col1.g - col1.b - _Threshold));
+				fixed4 val = ceil(saturate(col1.b - col1.r - _Threshold)) * ceil(saturate(col1.b - col1.g - _Threshold));
 				return lerp(col1, fixed4(0., 0., 0., 0.), val);
 			}
 

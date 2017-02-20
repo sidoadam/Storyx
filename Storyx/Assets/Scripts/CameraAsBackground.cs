@@ -11,11 +11,28 @@ public class CameraAsBackground : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+
+	}
+
+	void OnEnable()
+	{
 		arf = GetComponent<AspectRatioFitter> ();
 		image = GetComponent <RawImage>();
 		cam = new WebCamTexture (Screen.width, Screen.height);
 		image.texture = cam;
 		cam.Play ();
+	}
+
+	void OnDisable()
+	{
+		while (cam!=null && cam.isPlaying)
+		{
+			Debug.Log("is still playing");
+			cam.Stop();
+			cam=null;
+			break;
+		}
 	}
 
 	public void takePhoto()
