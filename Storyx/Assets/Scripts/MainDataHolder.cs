@@ -8,6 +8,10 @@ public class MainDataHolder : MonoBehaviour {
 
 	public static MainDataHolder instanse;
 
+	public Texture avatar;
+
+	public Rect current_rect;
+
 	public static Color currentChromaColor;
 	// Use this for initialization
 

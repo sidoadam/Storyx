@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class ChromaColorApply : MonoBehaviour {
 
+	public bool loadFromHolder = false;
+
 	UITexture t;
 
 	bool isSet = false;
 	// Use this for initialization
 	void Start () {
 		t = gameObject.GetComponent <UITexture>();
+
+		if (loadFromHolder) {
+			t.mainTexture = MainDataHolder.instanse.avatar;
+			t.uvRect = MainDataHolder.instanse.current_rect;
+		}
 	}
 
 	void OnEnable()

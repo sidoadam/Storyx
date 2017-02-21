@@ -10,6 +10,8 @@ public class HowToPlayController : MonoBehaviour {
 	public GameObject how_to_play_btn;
 	// Use this for initialization
 	void Start () {
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
 		how_to_play_btn.SetActive (false);
 
 		player.OnReady += onVideoReady;

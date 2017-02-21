@@ -104,6 +104,9 @@ public class TakePhotoController : MonoBehaviour {
 					t.uvRect = takePhotoPreviewImage.uvRect;
 					t.mainTexture = takePhotoPreviewImage.mainTexture;
 					t.material = takePhotoPreviewImage.material;
+
+					MainDataHolder.instanse.avatar = takePhotoPreviewImage.mainTexture;
+					MainDataHolder.instanse.current_rect = takePhotoPreviewImage.uvRect;
 				}
 				scenarioObject.SendMessage ("playChapterVideo");
 			}
