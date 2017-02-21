@@ -20,6 +20,8 @@ public class Adventure1_3 : MonoBehaviour {
 	void onAdminVideoEnded()
 	{
 		adminVideo.OnEnd -= onAdminVideoEnded;
+		adminVideo.Stop ();
+		adminVideo.UnLoad ();
 		mainUI.SetActive (true);
 		physicalMissionScreen.SetActive (true);
 	
@@ -45,6 +47,11 @@ public class Adventure1_3 : MonoBehaviour {
 	{
 		//chapterVideo.Stop();
 		chapterVideo.OnEnd -= onChapterVideoEnded;
+		chapterVideo.Stop ();
+		chapterVideo.UnLoad ();
+
+		Resources.UnloadUnusedAssets ();
+		System.GC.Collect ();
 		//chapterVideo.gameObject.SetActive (false);
 		loadNextScene();
 	}

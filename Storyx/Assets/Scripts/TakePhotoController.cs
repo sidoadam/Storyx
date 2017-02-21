@@ -103,6 +103,7 @@ public class TakePhotoController : MonoBehaviour {
 				foreach (UITexture t in interactivedTextures) {
 					t.uvRect = takePhotoPreviewImage.uvRect;
 					t.mainTexture = takePhotoPreviewImage.mainTexture;
+					t.material = takePhotoPreviewImage.material;
 				}
 				scenarioObject.SendMessage ("playChapterVideo");
 			}

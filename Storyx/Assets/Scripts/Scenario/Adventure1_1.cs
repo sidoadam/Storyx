@@ -26,6 +26,8 @@ public class Adventure1_1 : MonoBehaviour {
 	void onAdminVideoEnded()
 	{
 		adminVideo.OnEnd -= onAdminVideoEnded;
+		adminVideo.Stop ();
+		adminVideo.UnLoad ();
 		chapterVideo.gameObject.SetActive (true);
 		adminVideo.gameObject.SetActive (false);
 		mainUI.SetActive (true);
@@ -42,6 +44,12 @@ public class Adventure1_1 : MonoBehaviour {
 	void onChapterVideoEnded()
 	{
 		chapterVideo.OnEnd -= onChapterVideoEnded;
+		chapterVideo.Stop ();
+		chapterVideo.UnLoad ();
+
+		Resources.UnloadUnusedAssets ();
+		System.GC.Collect ();
+
 		SceneManager.LoadScene ("Adventure1_2");
 	}
 }

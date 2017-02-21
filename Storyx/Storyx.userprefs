@@ -1,13 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Scenario/Adventure1_3.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TakePhotoController.cs">
     <Files>
-      <File FileName="Assets/ChromaKeyKitAsset/Scripts/VideoControllerRawImage.cs" Line="9" Column="32" />
-      <File FileName="Assets/Scripts/Scenario/Adventure1_2.cs" Line="57" Column="5" />
-      <File FileName="Assets/Scripts/Scenario/Adventure1_3.cs" Line="48" Column="38" />
-      <File FileName="Assets/EasyMovieTexture/Scripts/MediaPlayerCtrl.cs" Line="876" Column="5" />
-      <File FileName="Assets/Scripts/TakePhotoController.cs" Line="37" Column="5" />
+      <File FileName="Assets/NGUI/Examples/Scripts/Other/SetColorPickerColor.cs" Line="12" Column="20" />
+      <File FileName="Assets/ChromaKeyKitAsset/Scripts/VideoControllerRawImage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Scenario/Adventure1_2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Scenario/Adventure1_3.cs" Line="1" Column="1" />
+      <File FileName="Assets/EasyMovieTexture/Scripts/MediaPlayerCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TakePhotoController.cs" Line="106" Column="49" />
       <File FileName="Assets/Scripts/Scenario/Adventure1_4.cs" Line="1" Column="1" />
+      <File FileName="Assets/NGUI/Scripts/UI/UIColorPicker.cs" Line="99" Column="2" />
+      <File FileName="Assets/Scripts/PhotoPreviewController.cs" Line="34" Column="29" />
+      <File FileName="Assets/ChromaKeyKitAsset/MultiShaderKit/ChromaKeyKit/KitComponents/ChromaKey/ChromaKey_BgTex.shader" Line="5" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -244,6 +244,7 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\Scripts\CameraAsBackground.cs" />
+     <Compile Include="Assets\Scripts\ChromaColorApply.cs" />
      <Compile Include="Assets\Scripts\HowToPlayController.cs" />
      <Compile Include="Assets\Scripts\InteractiveImage.cs" />
      <Compile Include="Assets\Scripts\MainDataHolder.cs" />

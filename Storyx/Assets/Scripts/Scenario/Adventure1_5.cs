@@ -44,6 +44,12 @@ public class Adventure1_5 : MonoBehaviour {
 	public void onChapterVideoEnded()
 	{
 		chapterVideo.OnEnd -= onChapterVideoEnded;
+		chapterVideo.Stop ();
+		chapterVideo.UnLoad ();
+
+		Resources.UnloadUnusedAssets ();
+		System.GC.Collect ();
+
 		SceneManager.LoadScene ("Adventure1_6");
 	}
 

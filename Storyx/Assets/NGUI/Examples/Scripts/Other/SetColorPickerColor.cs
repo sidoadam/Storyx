@@ -8,7 +8,9 @@ public class SetColorPickerColor : MonoBehaviour
 	public void SetToCurrent ()
 	{
 		if (mWidget == null) mWidget = GetComponent<UIWidget>();
-		if (UIColorPicker.current != null)
+		if (UIColorPicker.current != null) {
 			mWidget.color = UIColorPicker.current.value;
+			MainDataHolder.currentChromaColor = UIColorPicker.current.value;
+		}
 	}
 }

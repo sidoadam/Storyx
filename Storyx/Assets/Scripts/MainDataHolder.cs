@@ -7,6 +7,8 @@ public class MainDataHolder : MonoBehaviour {
 	public ArrayList B_PhotoHolder = new ArrayList();
 
 	public static MainDataHolder instanse;
+
+	public static Color currentChromaColor;
 	// Use this for initialization
 
 	void Awake()

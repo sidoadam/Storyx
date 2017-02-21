@@ -8,6 +8,8 @@ public class PhotoPreviewController : MonoBehaviour {
 	private Rect defaultRect;
 	private Vector2 additionalPos;
 	public bool canScale = true;
+
+	public bool canDrag = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -26,10 +28,29 @@ public class PhotoPreviewController : MonoBehaviour {
 		targetTexture.uvRect = defaultRect;
 	}
 
+	public void updateBGColor()
+	{
+		Debug.Log ("update");
+		if (targetTexture.drawCall != null)
+		targetTexture.drawCall.dynamicMaterial.SetColor ("_KeyColor",UIColorPicker.current.value);
+	}
+
+	public void startDrag()
+	{
+		Debug.Log ("start drag");
+		canDrag = true;
+	}
+
+	public void endDrag()
+	{
+		Debug.Log ("start drag");
+		canDrag = false;
+	}
+
 	// Update is called once per frame
 	void Update () {
 
-		if (!canScale)
+		if (!canScale || !canDrag)
 			return;
 
 		if (Input.touchCount == 2) {
