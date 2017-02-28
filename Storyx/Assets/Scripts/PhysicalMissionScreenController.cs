@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PhysicalMissionScreenController : MonoBehaviour {
 
-
+	public GameObject cameraBtn;
 	public GameObject nextBtn;
 	private bool NextBtnIsActive = false;
 	// Use this for initialization
@@ -17,12 +17,45 @@ public class PhysicalMissionScreenController : MonoBehaviour {
 		
 	}
 
+	void OnEnable()
+	{
+		startCameraIcon ();
+	}
+
+
+	public void takePhoto()
+	{
+		TakePhotoController manager = FindObjectOfType <TakePhotoController> ();
+		manager.GetImageFromCamera ();
+	}
+
+	void startCameraIcon()
+	{
+		cameraBtn.GetComponent <UITexture>().alpha = 0.3f;
+		cameraBtn.GetComponent <BoxCollider> ().enabled = false;
+
+		Invoke ("enableCameraIcon",20f);
+	}
+
+	void enableCameraIcon()
+	{
+		cameraBtn.GetComponent <UITexture>().alpha = 1f;
+		cameraBtn.GetComponent <BoxCollider> ().enabled = true;
+	}
+
+
+	void disableCameraIcon()
+	{
+		cameraBtn.SetActive (false);
+	}
 
 	void enableNextBtn()
 	{
 		NextBtnIsActive = true;
 		nextBtn.GetComponent <UISprite>().color = Color.green;
 		nextBtn.GetComponent <UISprite> ().alpha = 1;
+
+		//disableNextBtn ();
 	}
 
 	void disableNextBtn()
@@ -37,7 +70,8 @@ public class PhysicalMissionScreenController : MonoBehaviour {
 		if (NextBtnIsActive) {
 			TakePhotoController manager = FindObjectOfType <TakePhotoController> ();
 			manager.MissionScreenNext ();
+			gameObject.SetActive (false);
 		}
-		gameObject.SetActive (false);
+
 	}
 }

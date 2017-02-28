@@ -10,11 +10,17 @@ public class Adventure1_7: MonoBehaviour {
 	public TakePhotoController photoController;
 	public GameObject mainUI;
 	public GameObject physicalMissionScreen;
+
+	public GameObject pauseUI;
 	// Use this for initialization
 	void Start () {
 		physicalMissionScreen.SetActive (false);
 		adminVideo.OnEnd += onAdminVideoEnded;
 		chapterVideo.OnEnd += onChapterVideoEnded;
+
+		chapterVideo.Load ("putitback.mp4");
+
+		pauseUI.GetComponent <PauseController> ().currentVideo = adminVideo;
 	}
 
 	void onAdminVideoEnded()
@@ -25,6 +31,7 @@ public class Adventure1_7: MonoBehaviour {
 		mainUI.SetActive (true);
 		physicalMissionScreen.SetActive (true);
 	
+		pauseUI.SetActive (false);
 	}
 
 	void disableAdminVideo()
@@ -32,10 +39,30 @@ public class Adventure1_7: MonoBehaviour {
 		adminVideo.gameObject.SetActive (false);
 	}
 
-	void playChapterVideo()
+	void playStopChapter()
 	{
 		adminVideo.gameObject.SetActive (false);
+		StartCoroutine ("onPlayPause");
+	}
+
+	IEnumerator onPlayPause()
+	{
 		chapterVideo.Play ();
+		yield return new WaitWhile (() =>  chapterVideo.GetSeekPosition() < 100);
+		//while(chapterVideo.GetCurrentState() != MediaPlayerCtrl.MEDIAPLAYER_STATE.PLAYING)
+		//yield return null;
+
+		chapterVideo.Pause ();
+	}
+
+	void playChapterVideo()
+	{
+		mainUI.SetActive (false);
+		adminVideo.gameObject.SetActive (false);
+		chapterVideo.Play ();
+
+		pauseUI.SetActive (true);
+		pauseUI.GetComponent <PauseController> ().currentVideo = chapterVideo;
 	}
 
 	void enableNextBtn()
@@ -45,14 +72,30 @@ public class Adventure1_7: MonoBehaviour {
 
 	public void onChapterVideoEnded()
 	{
-		chapterVideo.OnEnd -= onChapterVideoEnded;
-		chapterVideo.Stop ();
-		chapterVideo.UnLoad ();
+		StartCoroutine (CheckInputVideo());
+	}
 
-		Resources.UnloadUnusedAssets ();
-		System.GC.Collect ();
+	IEnumerator CheckInputVideo()
+	{
+		if (chapterVideo.m_strFileName == "putitback.mp4") {
+			chapterVideo.Stop ();
+			chapterVideo.UnLoad ();
+			chapterVideo.Load ("Chapter05-HD.mp4");
+			pauseUI.SetActive (false);
+			yield return new WaitForSeconds(1f);
+			mainUI.SetActive (true);
+			enableNextBtn ();
+			//chapterVideo.Play();
+		} else {
+			chapterVideo.OnEnd -= onChapterVideoEnded;
+			chapterVideo.Stop ();
+			chapterVideo.UnLoad ();
 
-		SceneManager.LoadScene ("Adventure1_9");
+			Resources.UnloadUnusedAssets ();
+			System.GC.Collect ();
+
+			SceneManager.LoadScene ("Adventure1_9");
+		}
 	}
 
 	// Update is called once per frame

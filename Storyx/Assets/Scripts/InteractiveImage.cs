@@ -50,9 +50,11 @@ public class InteractiveImage : MonoBehaviour {
 	
 	void FixedUpdate()
 	{
-		if (targetTexture.mainTexture == null) {
-			if (manager.photoTexture != null) {
-				targetTexture.mainTexture = manager.photoTexture;
+		if (targetTexture != null) {
+			if (targetTexture.mainTexture == null) {
+				if (manager.photoTexture != null) {
+					targetTexture.mainTexture = manager.photoTexture;
+				}
 			}
 		}
 
@@ -81,17 +83,17 @@ public class InteractiveImage : MonoBehaviour {
 						target.transform.localPosition = d.position;
 					}
 					if (d.isTweenPosition)
-						TweenPosition.Begin (target, d.tweenPositionTime, d.desPosition);
+						TweenPosition.Begin (target, d.tweenPositionTime, d.desPosition).ignoreTimeScale = false;
 					if (d.isSetRotaion)
 						target.transform.localEulerAngles = d.rotation;
 					if (d.isTweenRotation) {
-						TweenRotation.Begin (target, d.tweenRotaionTime,Quaternion.Euler(d.desRotaion));
+						TweenRotation.Begin (target, d.tweenRotaionTime,Quaternion.Euler(d.desRotaion)).ignoreTimeScale = false;
 					}
 					if (d.isSetScale) {
 						target.transform.localScale = d.scale;
 					}
 					if (d.isTweenScale) {
-						TweenScale.Begin (target, d.tweenScaleTime, d.scaleDes);
+						TweenScale.Begin (target, d.tweenScaleTime, d.scaleDes).ignoreTimeScale = false;
 					}
 					currentTimeGoal++;
 				}

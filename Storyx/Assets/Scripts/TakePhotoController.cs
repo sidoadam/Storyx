@@ -108,14 +108,15 @@ public class TakePhotoController : MonoBehaviour {
 					MainDataHolder.instanse.avatar = takePhotoPreviewImage.mainTexture;
 					MainDataHolder.instanse.current_rect = takePhotoPreviewImage.uvRect;
 				}
-				scenarioObject.SendMessage ("playChapterVideo");
+				scenarioObject.SendMessage ("playAdminVideo2");
 			}
 			if (currentScenario == Scenario.Scenario1_2 || currentScenario == Scenario.Scenario1_3 || currentScenario == Scenario.Scenario1_5 || currentScenario == Scenario.Scenario1_6 || currentScenario == Scenario.Scenario1_7) {
-				scenarioObject.SendMessage ("enableNextBtn");
+				//scenarioObject.SendMessage ("enableNextBtn");
+				scenarioObject.SendMessage ("playChapterVideo");
 			}
 			if (currentScenario == Scenario.Scenario1_4 ) {
 				pictureTypeB2.mainTexture = takePhotoPreviewImage.mainTexture;
-				scenarioObject.SendMessage ("enableNextBtn");
+				scenarioObject.SendMessage ("playInputVideo");
 			}
 		}
 
@@ -178,11 +179,17 @@ public class TakePhotoController : MonoBehaviour {
 		if (currentScenario == Scenario.Scenario1_2 || currentScenario == Scenario.Scenario1_3 || currentScenario == Scenario.Scenario1_5 || currentScenario == Scenario.Scenario1_6 || currentScenario == Scenario.Scenario1_7) {
 			pictureTypeB.gameObject.transform.parent.gameObject.SetActive (true);
 			pictureTypeB.mainTexture = takePhotoPreviewImage.mainTexture;
+
+			scenarioObject.SendMessage ("playStopChapter");
+
 			Invoke ("hidePictureTypeB",3f);
 		}
 		if (currentScenario == Scenario.Scenario1_4) {
 			pictureTypeB.gameObject.transform.parent.gameObject.SetActive (true);
 			scenarioObject.SendMessage ("disableAdminVideo2");
+
+			scenarioObject.SendMessage ("playStopChapter");
+
 			Invoke ("hidePictureTypeB",3f);
 		}
 	}

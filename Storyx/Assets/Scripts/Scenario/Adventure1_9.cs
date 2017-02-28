@@ -8,10 +8,13 @@ public class Adventure1_9: MonoBehaviour {
 	public MediaPlayerCtrl chapterVideo;
 	public GameObject mainUI;
 	public GameObject physicalMissionScreen;
+
+	public GameObject pauseUI;
 	// Use this for initialization
 	void Start () {
 		physicalMissionScreen.SetActive (false);
 		chapterVideo.OnEnd += onChapterFinished;
+		pauseUI.SetActive (false);
 	}
 
 

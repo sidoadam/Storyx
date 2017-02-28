@@ -9,16 +9,31 @@ public class ShowAllPhotoManager : MonoBehaviour {
 	public GameObject target;
 	public GameObject scenarioObject;
 
+	public GameObject[] list;
+
 	private int currentSection = 0;
 
 	void Start () {
-		animateContainer ();	
+
+		foreach (GameObject go in list) {
+			go.SetActive (false);
+		}
+		Invoke ("animateContainer",1);
 	}
 
 	void animateContainer()
 	{
-		TweenPosition.Begin (target, 1, new Vector3(-2100*(currentSection+1),0)).delay =  3;
-		Invoke ("finishAnimate",4.1f);
+		//TweenPosition.Begin (target, 1, new Vector3(-2100*(currentSection+1),0)).delay =  3;
+		list[currentSection].SetActive(true);
+		TweenAlpha.Begin(list[currentSection],0.3f,0);
+
+		if (currentSection + 1 < list.Length) {
+			list[currentSection+1].SetActive(true);
+			list [currentSection + 1].GetComponent <UITexture>().alpha = 0;
+			TweenAlpha.Begin(list[currentSection+1],0.3f,1);
+		}
+
+		Invoke ("finishAnimate",2f);
 	}
 
 	void finishAnimate()
@@ -27,7 +42,7 @@ public class ShowAllPhotoManager : MonoBehaviour {
 			currentSection++;
 			animateContainer ();
 		} else {
-			scenarioObject.SendMessage ("onPlayChapter");
+			//scenarioObject.SendMessage ("onPlayChapter");
 		}
 	}
 

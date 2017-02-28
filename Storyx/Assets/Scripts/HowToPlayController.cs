@@ -34,6 +34,11 @@ public class HowToPlayController : MonoBehaviour {
 		SceneManager.LoadScene ("SelectMode");
 	}
 
+	public void onStartPlay()
+	{
+		SceneManager.LoadScene ("SelectMode");
+	}
+
 	public void onInstraction()
 	{
 		player.Play ();
